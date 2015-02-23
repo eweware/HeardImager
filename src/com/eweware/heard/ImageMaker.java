@@ -26,6 +26,7 @@ public class ImageMaker extends HttpServlet {
     private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.addHeader("Access-Control-Allow-Origin", "*");
         HttpSession session = request.getSession();
 
         Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(request);
@@ -48,6 +49,7 @@ public class ImageMaker extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.addHeader("Access-Control-Allow-Origin", "*");
         BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
         String theUrl = blobstoreService.createUploadUrl("/api/image");
 
