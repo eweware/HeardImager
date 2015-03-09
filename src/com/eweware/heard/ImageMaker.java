@@ -35,6 +35,10 @@ public class ImageMaker extends HttpServlet {
 
         if (blobKeys == null || blobKeys.isEmpty()) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            PrintWriter out = response.getWriter();
+            out.write(blobs.keySet().toString());
+            out.flush();
+            out.close();
         }
         else {
             ImagesService imagesService = ImagesServiceFactory.getImagesService();

@@ -11,11 +11,21 @@
         <servlet-class>com.eweware.heard.ImageMaker</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>URLImageMaker</servlet-name>
+        <servlet-class>com.eweware.heard.UploadURLImage</servlet-class>
+    </servlet>
+
     <!-- server mappings - API -->
 
     <servlet-mapping>
         <servlet-name>ImageMaker</servlet-name>
         <url-pattern>/api/image</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>URLImageMaker</servlet-name>
+        <url-pattern>/api/image/url</url-pattern>
     </servlet-mapping>
 
 
@@ -25,11 +35,22 @@
         <jsp-file>/photoTest.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>urlUploadTest</servlet-name>
+        <jsp-file>/urluploadtest.jsp</jsp-file>
+    </servlet>
+
     <!-- server mappings - WEB PAGES -->
 
     <servlet-mapping>
         <servlet-name>uploadTest</servlet-name>
         <url-pattern>/uploadtest</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>urlUploadTest</servlet-name>
+        <url-pattern>/urluploadtest</url-pattern>
     </servlet-mapping>
 
 
