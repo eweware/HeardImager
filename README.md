@@ -1,2 +1,4 @@
-# HeardImager
-A Google App-Engine based Image Server for Heard
+appengine-skeleton
+=============================
+
+This is a generated application from the appengine-skeleton archetype.

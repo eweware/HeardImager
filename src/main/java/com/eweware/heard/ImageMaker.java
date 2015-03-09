@@ -6,7 +6,6 @@ import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.google.appengine.api.images.ImagesService;
 import com.google.appengine.api.images.ImagesServiceFactory;
 import com.google.appengine.api.images.ServingUrlOptions;
-import com.google.appengine.repackaged.com.google.api.client.http.HttpStatusCodes;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
